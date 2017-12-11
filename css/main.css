@@ -7,7 +7,7 @@
 }
 /*Aplicamos tipo de letra Raleway al contenido de la pagina */
 body{
-    font-family: Arial, Helvetica, sans-serif/* 'Raleway', sans-serif; */
+    font-family: Montserrat, sans-serif;/* 'Raleway', sans-serif; */
     box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y la altura totales del elemento */
 }
 /*Estilos al menu header*/
@@ -111,6 +111,10 @@ footer{
     font-size: 14px;
     padding:20px;
 }
+.button-call{
+    background-color: #007bff;
+    border:none;
+}
 /*sistema grilla*/
 [class*= "column-"] {
      
@@ -118,8 +122,21 @@ footer{
      margin-right: 2%; /*Esto es el gutter */
  }
  .column-xs-12 { 
-    /* (12 / 12) * 100 */
-    width: 100%;
+     width: 100%;
+} 
+/* Tablet Grid */
+@media (min-width: 768px) {
+    
+
+  .column-4 {
+   width: 32%;
+  }
+  .column-4:nth-child(3n) {
+    margin-right: 0;
+  }
+  .column-xs-12 { 
+   width: 100%;
+   } 
 } 
 
 /* Desktop Grid */
@@ -128,11 +145,7 @@ footer{
    .column-3 {
      width: 23.5%; 
    }
-   
-   .column-3:nth-child(4n) {
-    margin-right: 0;
-   } 
-   
+    
    .column-4 {
     width: 32%;
    }
@@ -150,10 +163,5 @@ footer{
    .right-content:nth-child(2n) {
        margin-right: 0;
    }
-     
-   .column-12 { 
-       /* (12 / 12) * 100 */
-       width: 100%;
-   }
-   
-   }
+  
+}
