@@ -1,0 +1,151 @@
+
+/*Seteamos archivos*/
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+/*Aplicamos tipo de letra Raleway al contenido de la pagina */
+body{
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y la altura totales del elemento */
+}
+/*Estilos al menu header*/
+header{
+    width: 100%; /*ancho del header*/
+    height: 50px;
+    background: #333;
+    color:#fff;
+    position: fixed;/*Establecemos que el header se mantenga en su posicion*/
+    top: 0;
+    left: 0;
+    z-index: 1000;/*Establecemos que el header se mantenga por encima de los otros elementos*/
+}
+h1{
+    float: left;/*Flota a la izquierda*/
+}
+header .container{
+    display: table;
+}
+/*Barra menu*/
+#main-bar{
+    display:none;/*Ocultamos el elemento checkbox*/
+}
+header label{
+    float: right;/*Establecemos que flote a la derecha*/
+    font-size: 68px;
+    margin: 6px 0;
+    cursor:pointer;/*Establecemos puntero en forma de mano*/
+}
+.main{
+    position: absolute;
+    top:50px;
+    left: 0;
+    width: 100%;
+    height: 100vh;/* 100% del alto de la ventana */
+    background: rgba(51,51,51,0.9);
+    transition: all 0.5s;/* ver como se desplaza en 0.5 segundos*/
+    transform:translateX(-100%)/* transalada de manera horizontal */
+}
+.main a{
+    display: block;
+    color:#fff;
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom:1px solid rgba(255,255,255,0.3);
+
+}
+/* Cuando pase el mouse */
+.main a:hover{
+    border-bottom: rgba(255,255,255,0.3);
+}
+/*cuando tenga la pseudoclase checked*/
+#main-bar:checked ~ .main{
+    transform:translateX(0);/* transalandolo a su posicion original */
+}
+/*Fin estilos del menu*/
+
+.container{
+    width: 98%;
+    margin: auto; 
+}
+.banner-main{
+    position: relative;
+    margin-top:50px;
+}
+.banner{
+    width: 100%;
+    height: 100%;
+}
+h2{
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-50%);
+    color:#fff;
+
+}
+img{
+    width: 100%;
+    
+}
+.row:before, .row:after {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+} 
+/*sistema grilla*/
+[class*= "column-"] {
+     
+     float: left; 
+     margin-right: 2%; /*Esto es el gutter */
+ }
+ .column-xs-12 { 
+    /* (12 / 12) * 100 */
+    width: 100%;
+} 
+
+/* Desktop Grid */
+@media (min-width: 992px) {
+     
+   .column-3 {
+     width: 23.5%; 
+   }
+   
+   .column-3:nth-child(4n) {
+    margin-right: 0;
+   } 
+   
+   .column-4 {
+    width: 32%;
+   }
+   
+   .column-4:nth-child(3n) {
+     margin-right: 0;
+   }
+   
+   
+
+   .column-9 { 
+       width: 70%;
+   }
+  
+   .right-content .column-3{
+    width: 23.5%; 
+    margin-right: 0;
+   }
+   .right-content:nth-child(2n) {
+       margin-right: 0;
+   }
+     
+   .column-12 { 
+       /* (12 / 12) * 100 */
+       width: 100%;
+   }
+   
+   }
