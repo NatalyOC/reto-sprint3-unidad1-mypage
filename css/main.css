@@ -7,7 +7,7 @@
 }
 /*Aplicamos tipo de letra Raleway al contenido de la pagina */
 body{
-    font-family: 'Raleway', sans-serif;
+    font-family: Arial, Helvetica, sans-serif/* 'Raleway', sans-serif; */
     box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y la altura totales del elemento */
 }
 /*Estilos al menu header*/
@@ -91,6 +91,9 @@ img{
     width: 100%;
     
 }
+.row{
+    margin-bottom: 20px;
+}
 .row:before, .row:after {
     content: " ";
     display: table;
@@ -99,6 +102,15 @@ img{
 .row:after {
     clear: both;
 } 
+footer{
+    width: 100%; /*ancho del header*/
+    height: 50px;
+    background: #333;
+    color:#fff;
+    text-align: center;
+    font-size: 14px;
+    padding:20px;
+}
 /*sistema grilla*/
 [class*= "column-"] {
      
