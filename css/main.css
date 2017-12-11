@@ -136,13 +136,9 @@ footer{
    .column-4 {
     width: 32%;
    }
-   
    .column-4:nth-child(3n) {
      margin-right: 0;
    }
-   
-   
-
    .column-9 { 
        width: 70%;
    }
