@@ -7,7 +7,7 @@
 }
 /*Aplicamos tipo de letra Raleway al contenido de la pagina */
 body{
-    font-family: Montserrat, sans-serif;/* 'Raleway', sans-serif; */
+    font-family: font-family: 'Raleway', sans-serif;/* 'Raleway', sans-serif; */
     /* Incluye el relleno y el borde en el ancho y la altura totales del elemento */
 }
 /*Estilos al menu header*/
@@ -84,11 +84,13 @@ h2{
     top: 50%;
     left: 50%;
     transform: translateX(-50%)translateY(-50%);
-    color:#fff;
+    
+    
 
 }
 img{
     width: 100%;
+    height: auto;
     
 }
 .row{
